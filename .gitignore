@@ -1,4 +1,5 @@
-data/
+data/input/
 misc/
+code/*.py
 .ipynb_checkpoints/
 
