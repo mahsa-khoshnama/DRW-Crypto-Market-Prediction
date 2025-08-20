@@ -1,7 +1,7 @@
 # DRW-Crypto-Market-Prediction
 This project is based on the DRW Crypto Market Prediction Kaggle competition. The data and competition details can be found [here](https://www.kaggle.com/competitions/drw-crypto-market-prediction/overview).
 
-The dataset contains order book information along with 780 masked market features. In the feature_engineering notebook, I show that these features are highly correlated, making it suboptimal to incorporate them directly into prediction models. To address this, I apply hierarchical clustering to group the features into 174 clusters, which are then used in two different prediction models.
+The dataset contains order book information along with 780 masked market features. In the [feature_engineering](https://github.com/mahsa-khoshnama/DRW-Crypto-Market-Prediction/blob/main/code/feature_engineering.ipynb) notebook, I show that these features are highly correlated, making it suboptimal to incorporate them directly into prediction models. To address this, I apply hierarchical clustering to group the features into 174 clusters, which are then used in two different prediction models.
 
 Because crypto market data is very noisy, both models rely on ensembling multiple boosted trees. Training many models on different slices of the data or on different feature subsets helps reduce variance and makes the final predictions more stable and less sensitive to noise. This improves generalization compared to relying on a single model. To further guard against overfitting in this noisy setting, I restrict the hyperparameter ranges (e.g., using lower bagging and feature fractions and limiting the number of boosting rounds) so that the models stay relatively simple and generalize better.
 
