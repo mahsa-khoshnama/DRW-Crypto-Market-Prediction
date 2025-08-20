@@ -1,5 +1,5 @@
 # DRW-Crypto-Market-Prediction
-This project is based on the DRW Crypto Market Prediction Kaggle competition. The data and competition details can be found [here].
+This project is based on the DRW Crypto Market Prediction Kaggle competition. The data and competition details can be found [here](https://www.kaggle.com/competitions/drw-crypto-market-prediction/overview).
 
 The dataset contains order book information along with 780 masked market features. In the feature_engineering notebook, I show that these features are highly correlated, making it suboptimal to incorporate them directly into prediction models. To address this, I apply hierarchical clustering to group the features into 174 clusters, which are then used in two different prediction models.
 
